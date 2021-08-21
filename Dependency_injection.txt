@@ -1,0 +1,53 @@
+01. Pin check
+02. Limit check
+03. Fee Commission Calculate
+04. Issuer
+05. Trasaction Management System
+06. Database write
+07. SMS
+08. if APP(PUSH)
+
+@RestController
+Class Controller(){
+  @Autowire
+  private SendMoneyImpl sendMoney;
+ 
+  sendmoney.send();
+}
+
+
+@Service / @Component / @Bean
+Class SendMoneyImpl{
+private PichChecker pichChecker;
+private LimitChecker limitChecker;
+private FeeCommCalculator feeCommCalculator;
+private Issuer issuer;
+private Tms tms;
+private Dao dao;
+private Sms sms;
+private Push push;
+
+@Autowire
+void SendMoneyImpl(PichChecker pichChecker, LimitChecker limitChecker, FeeCommCalculator feeCommCalculator,
+                   Issuer issuer, Tms tms, Dao dao, Sms sms, Push push){
+    this.pinChecker = pinchecker;
+    this.limitCjecker = limitChecker;
+    .
+    .
+    .
+    this.push = push;
+}
+
+public String send(){
+   
+   pichChecker.check();
+   limitChecker.check();
+   ...
+   ...
+   ...
+   push.push();
+
+};
+
+
+}
